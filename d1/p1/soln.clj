@@ -32,4 +32,4 @@
 
 (def combos (reduce list_combinations (copy_val nums (Integer. (first *command-line-args*)))))
 
-(println (first (filter #(not= () %1) (map #(reduce * %1) (filter #(= 2020 (reduce + %1)) combos)))))
+(println (first (map #(reduce * %1) (filter #(= 2020 (reduce + %1)) combos))))
