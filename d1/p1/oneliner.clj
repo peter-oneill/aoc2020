@@ -1,0 +1,1 @@
+(println (first (filter #(not= () %1) (map #(reduce * %1) (filter #(= 2020 (reduce + %1)) (reduce (fn [c d] (mapcat (fn [x] (map (fn [y] (apply conj x y)) d)) c)) (loop [n (Integer. (first *command-line-args*)) o '()] (if (= n 0) o (recur (- n 1) (conj o (map #(list (Integer. %1)) (rest *command-line-args*))))))))))))
