@@ -8,7 +8,7 @@
          x_coord r
          trees 0]
     (if (empty? remaining_slope)
-        trees
+      trees
       (recur (rest remaining_slope)
              (+ x_coord r)
              (+ trees (x_coord_tree (first remaining_slope) x_coord))))))
